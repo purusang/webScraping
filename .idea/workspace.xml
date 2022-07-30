@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ba192d5-5697-475e-8b8a-d914c6682a46" name="Default Changelist" comment="" />
+    <list default="true" id="7ba192d5-5697-475e-8b8a-d914c6682a46" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/news-headlines.py" beforeDir="false" afterPath="$PROJECT_DIR$/news-headlines.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +17,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2CcIWm186T4Ke8Ts5LL4v8tE2sY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../socket" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -66,5 +72,16 @@
       <updated>1659095479169</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

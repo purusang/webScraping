@@ -2,6 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options 
 from selenium.webdriver.chrome.service import Service
 import pandas as pd
+from datetime import datetime
+import os
+import sys
+
+# path where we are placing our executable file.
+application_path = os.path.dirname(sys.executable)
+
+now = datetime.now()
+# MMDDYYYY
+month_day_year = now.strftime("%m%d%Y")
 
 website = "https://www.thesun.co.uk/sports/football/"
 path = "D:/python/webScraping/chromedriver.exe"
@@ -30,7 +40,10 @@ for container in containers:
 
 my_dict = {"title": titles, "subtitle": subtitles, "link": links}
 df_headlines = pd.DataFrame(my_dict)
-df_headlines.to_csv("D:/python/webScraping/headline-headless.csv")
+
+
+final_path = f"D:/python/webScraping/headline-hl-{month_day_year}.csv" 
+df_headlines.to_csv(final_path)
 
 driver.quit()
 
