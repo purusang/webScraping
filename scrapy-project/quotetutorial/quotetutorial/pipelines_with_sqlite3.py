@@ -6,7 +6,7 @@
 
 # useful for handling differet item types with a single interface
 from itemadapter import ItemAdapter
-import mysql.connector
+import sqlite3
 
 class QuotetutorialPipeline:
     def __init__(self):
@@ -14,7 +14,7 @@ class QuotetutorialPipeline:
         self.create_table()
 
     def make_connection(self):
-        self.conn = mysql.connector.connect(host = 'localhost', user = 'root', passwd = 'root', database = 'quotes')
+        self.conn = sqlite3.connect("quotes.db")
         self.curr = self.conn.cursor()
 
     def create_table(self):
@@ -27,7 +27,7 @@ class QuotetutorialPipeline:
 
 
     def save_data(self, item):
-        self.curr.execute("""insert into quotes_tb values (%s, %s, %s)""", (item['title'][0],
+        self.curr.execute("""insert into quotes_tb values (?, ?, ?)""", (item['title'][0],
                                                                          item['author'][0],
                                                                          ','.join(item['tag'])))
         self.conn.commit()
